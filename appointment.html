@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="appointment.html">Book Appointment</a>
+</nav>
+
+<h2>Book Appointment</h2>
+
+<form id="form">
+  <input type="text" id="name" placeholder="Enter Name" required>
+  <input type="date" id="date" required>
+
+  <select id="doctor">
+    <option>Dr. Sharma</option>
+    <option>Dr. Khan</option>
+    <option>Dr. Patel</option>
+  </select>
+
+  <button type="submit">Book</button>
+</form>
+
+<h2>Appointments</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Doctor</th>
+    </tr>
+  </thead>
+  <tbody id="output"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
