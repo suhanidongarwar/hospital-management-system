@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Hospital Management</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="doctors.html">Doctors</a>
-  <a href="appointment.html">Book Appointment</a>
+  <a href="#home">Home</a>
+  <a href="#doctors">Doctors</a>
+  <a href="#appointment">Appointment</a>
 </nav>
 
-<h1>Welcome to Hospital</h1>
-<p>Click below to view doctors</p>
+<!-- HOME -->
+<section id="home">
+  <h1>Welcome to Hospital Management System</h1>
+  <p>Best healthcare services for you</p>
+</section>
 
-<a href="doctors.html">
-  <button>View Doctors</button>
-</a>
+<!-- DOCTORS -->
+<section id="doctors">
+  <h1>Our Doctors</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Specialization</th>
+    </tr>
+    <tr>
+      <td>Dr. Sharma</td>
+      <td>Cardiologist</td>
+    </tr>
+    <tr>
+      <td>Dr. Khan</td>
+      <td>Dermatologist</td>
+    </tr>
+    <tr>
+      <td>Dr. Patel</td>
+      <td>Neurologist</td>
+    </tr>
+  </table>
+</section>
+
+<!-- APPOINTMENT -->
+<section id="appointment">
+  <h1>Book Appointment</h1>
+
+  <form>
+    <input type="text" placeholder="Enter Name" required>
+    <input type="date" required>
+
+    <select>
+      <option>Dr. Sharma</option>
+      <option>Dr. Khan</option>
+      <option>Dr. Patel</option>
+    </select>
+
+    <button type="submit">Book</button>
+  </form>
+</section>
 
 </body>
 </html>
