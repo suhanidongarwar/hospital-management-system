@@ -1,10 +1,6 @@
 body {
   margin: 0;
   padding-top: 70px;
-}
-body {
-  margin: 0;
-  padding-top: 70px;
   font-family: Arial;
   scroll-behavior: smooth;
 }
@@ -30,36 +26,6 @@ section {
   text-align: center;
 }
 
-#home {
-  background: lightblue;
-}
-
-#doctors {
-  background: lightgray;
-}
-
-#appointment {
-  background: lightgreen;
-}
-
-table {
-  margin: auto;
-  width: 70%;
-  background: white;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 10px;
-}
-
-th {
-  background: #007bff;
-  color: white;
-}
-
-form input, form select, form button {
-  padding: 10px;
-  margin: 10px;
-}
+#home { background: lightblue; }
+#doctors { background: lightgray; }
+#appointment { background: lightgreen; }
