@@ -4,33 +4,48 @@
   <title>Appointment</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="doctor.html">Doctors</a>
+  <a href="appointment.html">Appointment</a>
+  <a href="patient.html">Patients</a>
+  <a href="billing.html">Billing</a>
+</nav>
 
 <h1>Book Appointment</h1>
 
-<form id="form">
-  <input type="text" id="name" placeholder="Name" required>
-  <input type="date" id="date" required>
+<!-- FORM -->
+<div>
+  <input type="text" id="name" placeholder="Enter Name">
+  <input type="date" id="date">
 
   <select id="doctor">
+    <option value="">Select Doctor</option>
     <option>Dr. Sharma</option>
     <option>Dr. Khan</option>
     <option>Dr. Patel</option>
   </select>
 
-  <button type="submit">Book</button>
-</form>
+  <button onclick="bookAppointment()">Book</button>
+</div>
 
-<h2>Appointments</h2>
+<!-- TABLE -->
+<h2>Appointment List</h2>
 
-<table id="output">
-<tr>
-  <th>Name</th>
-  <th>Date</th>
-  <th>Doctor</th>
-</tr>
+<table id="outputTable">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Doctor</th>
+  </tr>
 </table>
 
+<!-- JS LINK -->
 <script src="js/script.js"></script>
+
 </body>
 </html>
