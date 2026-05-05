@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-  background: #007bff;
+  background: blue;
   padding: 15px;
   position: fixed;
   width: 100%;
@@ -17,12 +17,11 @@ nav a {
   color: white;
   margin: 15px;
   text-decoration: none;
-  font-weight: bold;
 }
 
 section {
   min-height: 100vh;
-  padding: 100px 20px;
+  padding: 100px;
   text-align: center;
 }
 
