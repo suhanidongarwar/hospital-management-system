@@ -1,27 +1,36 @@
-<section id="appointment">
-  <h1>Book Appointment</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-  <form id="form">
-    <input type="text" id="name" placeholder="Enter Name" required>
-    <input type="date" id="date" required>
+<h1>Book Appointment</h1>
 
-    <select id="doctor">
-      <option>Dr. Sharma</option>
-      <option>Dr. Khan</option>
-      <option>Dr. Patel</option>
-    </select>
+<form id="form">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="date" id="date" required>
 
-    <button type="submit">Book</button>
-  </form>
+  <select id="doctor">
+    <option>Dr. Sharma</option>
+    <option>Dr. Khan</option>
+    <option>Dr. Patel</option>
+  </select>
 
-  <h2>Appointments</h2>
+  <button type="submit">Book</button>
+</form>
 
-  <table id="output">
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Doctor</th>
-    </tr>
-  </table>
-</section>
 <h2>Appointments</h2>
+
+<table id="output">
+<tr>
+  <th>Name</th>
+  <th>Date</th>
+  <th>Doctor</th>
+</tr>
+</table>
+
+<script src="js/script.js"></script>
+</body>
+</html>
