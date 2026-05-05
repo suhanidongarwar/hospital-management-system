@@ -1,22 +1,23 @@
 const form = document.getElementById("form");
-const output = document.getElementById("output");
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+if (form) {
+  const output = document.getElementById("output");
 
-  const name = document.getElementById("name").value;
-  const date = document.getElementById("date").value;
-  const doctor = document.getElementById("doctor").value;
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  const row = `
-    <tr>
-      <td>${name}</td>
-      <td>${date}</td>
-      <td>${doctor}</td>
-    </tr>
-  `;
+    const name = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const doctor = document.getElementById("doctor").value;
 
-  output.innerHTML += row;
+    output.innerHTML += `
+      <tr>
+        <td>${name}</td>
+        <td>${date}</td>
+        <td>${doctor}</td>
+      </tr>
+    `;
 
-  form.reset();
-});
+    form.reset();
+  });
+}
