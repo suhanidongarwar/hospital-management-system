@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding-top: 70px;
   font-family: Arial;
   scroll-behavior: smooth;
 }
@@ -20,8 +21,8 @@ nav a {
 }
 
 section {
-  height: 100vh;
-  padding-top: 80px;
+  min-height: 100vh;
+  padding: 100px 20px;
   text-align: center;
 }
 
@@ -39,7 +40,7 @@ section {
 
 table {
   margin: auto;
-  width: 60%;
+  width: 70%;
   background: white;
   border-collapse: collapse;
 }
@@ -47,6 +48,11 @@ table {
 th, td {
   border: 1px solid black;
   padding: 10px;
+}
+
+th {
+  background: #007bff;
+  color: white;
 }
 
 form input, form select, form button {
