@@ -1,23 +1,29 @@
-const form = document.getElementById("form");
+function saveData() {
 
-if (form) {
-  const output = document.getElementById("output");
+    let name = document.getElementById("name").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
+    let doctor = document.getElementById("doctor").value;
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
+    let data = {name, date, time, doctor};
 
-    const name = document.getElementById("name").value;
-    const date = document.getElementById("date").value;
-    const doctor = document.getElementById("doctor").value;
+    localStorage.setItem("appointment", JSON.stringify(data));
 
-    output.innerHTML += `
-      <tr>
-        <td>${name}</td>
-        <td>${date}</td>
-        <td>${doctor}</td>
-      </tr>
-    `;
+    alert("Data Saved!");
+}
 
-    form.reset();
-  });
+function showData() {
+
+    let data = JSON.parse(localStorage.getItem("appointment"));
+
+    if (data == null) return;
+
+    let table = document.getElementById("table");
+
+    let row = table.insertRow();
+
+    row.insertCell(0).innerHTML = data.name;
+    row.insertCell(1).innerHTML = data.date;
+    row.insertCell(2).innerHTML = data.time;
+    row.insertCell(3).innerHTML = data.doctor;
 }
