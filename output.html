@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Output</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>Output</title>
 </head>
+<body>
 
-<body onload="showData()">
+<h2>Appointment Details</h2>
 
-<h1>Appointment Data</h1>
-
-<table border="1" id="table">
+<table border="1">
 <tr>
-<th>Name</th>
-<th>Date</th>
-<th>Time</th>
-<th>Doctor</th>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Time</th>
+</tr>
+<tr>
+    <td id="outName"></td>
+    <td id="outDate"></td>
+    <td id="outTime"></td>
 </tr>
 </table>
 
-<script src="js/script.js"></script>
+<script>
+var data = JSON.parse(localStorage.getItem("appointment"));
+
+if(data){
+    document.getElementById("outName").innerText = data.name;
+    document.getElementById("outDate").innerText = data.date;
+    document.getElementById("outTime").innerText = data.time;
+}
+</script>
 
 </body>
 </html>
