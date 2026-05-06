@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Appointment</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>Appointment</title>
 </head>
-
 <body>
 
-<h1>Book Appointment</h1>
+<h2>Book Appointment</h2>
 
-<input type="text" id="name" placeholder="Enter Name">
-<input type="date" id="date">
-<input type="time" id="time">
+<input type="text" id="name" placeholder="Enter Name"><br><br>
+<input type="date" id="date"><br><br>
+<input type="time" id="time"><br><br>
 
-<select id="doctor">
-<option>Select Doctor</option>
-<option>Dr. Sharma</option>
-<option>Dr. Khan</option>
-<option>Dr. Patel</option>
-</select>
+<button onclick="saveData()">Book</button>
 
-<br><br>
+<script>
+function saveData() {
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
 
-<button onclick="saveData()">Submit</button>
+    if(name=="" || date=="" || time==""){
+        alert("Fill all fields");
+        return;
+    }
 
-<br><br>
+    var data = {
+        name: name,
+        date: date,
+        time: time
+    };
 
-<a href="output.html">
-<button>View Output</button>
-</a>
+    localStorage.setItem("appointment", JSON.stringify(data));
 
-<script src="js/script.js"></script>
+    alert("Saved!");
+    window.location.href = "output.html";
+}
+</script>
 
 </body>
 </html>
