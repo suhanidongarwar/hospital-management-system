@@ -1,29 +1,22 @@
 function saveData() {
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
 
-    let name = document.getElementById("name").value;
-    let date = document.getElementById("date").value;
-    let time = document.getElementById("time").value;
-    let doctor = document.getElementById("doctor").value;
+    if(name === "" || date === "" || time === "") {
+        alert("Please fill all fields");
+        return;
+    }
 
-    let data = {name, date, time, doctor};
+    var data = {
+        name: name,
+        date: date,
+        time: time
+    };
 
     localStorage.setItem("appointment", JSON.stringify(data));
 
-    alert("Data Saved!");
-}
+    alert("Appointment Saved!");
 
-function showData() {
-
-    let data = JSON.parse(localStorage.getItem("appointment"));
-
-    if (data == null) return;
-
-    let table = document.getElementById("table");
-
-    let row = table.insertRow();
-
-    row.insertCell(0).innerHTML = data.name;
-    row.insertCell(1).innerHTML = data.date;
-    row.insertCell(2).innerHTML = data.time;
-    row.insertCell(3).innerHTML = data.doctor;
+    window.location.href = "output.html";
 }
