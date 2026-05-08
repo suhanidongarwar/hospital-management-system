@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Output</title>
+
+    <title>Appointment Output</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
-<h2>Appointment Details</h2>
+<!-- Navbar -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="output.html">Output</a>
+</nav>
 
-<table border="1">
-<tr>
-    <th>Name</th>
-    <th>Date</th>
-    <th>Time</th>
-</tr>
-<tr>
-    <td id="outName"></td>
-    <td id="outDate"></td>
-    <td id="outTime"></td>
-</tr>
-</table>
+<div class="container">
+
+    <div class="card">
+
+        <h1>Appointment Records</h1>
+
+        <table id="table">
+
+            <tr>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <button onclick="clearData()">Clear All</button>
+
+    </div>
+
+</div>
 
 <script>
-var data = JSON.parse(localStorage.getItem("appointment"));
 
-if(data){
-    document.getElementById("outName").innerText = data.name;
-    document.getElementById("outDate").innerText = data.date;
-    document.getElementById("outTime").innerText = data.time;
+var data = JSON.parse(localStorage.getItem("appointments")) || [];
+
+var table = document.getElementById("table");
+
+data.forEach(function(item){
+
+    var row = table.insertRow();
+
+    row.insertCell(0).innerText = item.name;
+    row.insertCell(1).innerText = item.doctor;
+    row.insertCell(2).innerText = item.date;
+    row.insertCell(3).innerText = item.time;
+
+});
+
+function clearData(){
+
+    localStorage.clear();
+
+    location.reload();
 }
+
 </script>
 
 </body>
