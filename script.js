@@ -6,13 +6,16 @@ function saveData() {
     var time = document.getElementById("time").value;
 
     if(name=="" || doctor=="" || date=="" || time==""){
+
         alert("Please fill all fields");
+
         return;
     }
 
     var oldData = JSON.parse(localStorage.getItem("appointments")) || [];
 
     var newData = {
+
         name:name,
         doctor:doctor,
         date:date,
@@ -23,7 +26,7 @@ function saveData() {
 
     localStorage.setItem("appointments", JSON.stringify(oldData));
 
-    alert("Appointment Booked!");
+    alert("Appointment Booked Successfully!");
 
-    window.location.href="output.html";
+    window.location.href = "output.html";
 }
