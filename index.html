@@ -1,46 +1,209 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Hospital Management System</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<head>
+
+<title>Hospital Management System</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <nav>
-    <h2>City Hospital</h2>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="doctors.html">Doctors</a></li>
-        <li><a href="appointment.html">Appointment</a></li>
-        <li><a href="output.html">Output</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<a href="#slide1">Home</a>
+
+<a href="#slide2">Login</a>
+
+<a href="#slide3">Doctors</a>
+
+<a href="#slide4">Appointment</a>
+
+<a href="#slide5">Output</a>
+
+<a href="#slide6">About</a>
+
+<a href="#slide7">Contact</a>
+
 </nav>
 
-<section class="home">
+<!-- SLIDE 1 -->
 
-    <h1>Welcome to City Hospital</h1>
+<section id="slide1" class="slide slide1">
 
-    <p>Best Healthcare Services For Patients</p>
+<h1>Hospital Management System</h1>
 
-    <img src="images/hospital.jpg" width="500">
+<img src="images/hospital.jpg" class="main-image">
 
-    <div class="services">
-
-        <button>Emergency</button>
-        <button>ICU</button>
-        <button>OPD</button>
-        <button>Surgery</button>
-
-    </div>
+<p>Welcome to Our Hospital</p>
 
 </section>
 
+<!-- SLIDE 2 -->
+
+<section id="slide2" class="slide slide2">
+
+<h1>Patient Login</h1>
+
+<div class="form-box">
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Password">
+
+<input type="number" placeholder="Mobile Number">
+
+<button>Login</button>
+
+<button>Register</button>
+
+</div>
+
+</section>
+
+<!-- SLIDE 3 -->
+
+<section id="slide3" class="slide slide3">
+
+<h1>Doctors</h1>
+
+<div class="doctor-container">
+
+<div class="doctor-card">
+
+<img src="images/doctor1.jpg">
+
+<h2>Dr. Sharma</h2>
+
+<p>Cardiologist</p>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="images/doctor2.jpg">
+
+<h2>Dr. Mehta</h2>
+
+<p>Neurologist</p>
+
+</div>
+
+<div class="doctor-card">
+
+<img src="images/doctor3.jpg">
+
+<h2>Dr. Khan</h2>
+
+<p>Surgeon</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SLIDE 4 -->
+
+<section id="slide4" class="slide slide4">
+
+<h1>Book Appointment</h1>
+
+<div class="form-box">
+
+<input type="text" id="name" placeholder="Patient Name">
+
+<input type="number" id="age" placeholder="Age">
+
+<select id="doctor">
+
+<option>Dr. Sharma</option>
+<option>Dr. Mehta</option>
+<option>Dr. Khan</option>
+
+</select>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<textarea id="problem" placeholder="Problem"></textarea>
+
+<button onclick="saveAppointment()">
+
+Submit
+
+</button>
+
+</div>
+
+</section>
+
+<!-- SLIDE 5 -->
+
+<section id="slide5" class="slide slide5">
+
+<h1>Appointment Output</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+<th>Doctor</th>
+<th>Age</th>
+<th>Time</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- SLIDE 6 -->
+
+<section id="slide6" class="slide slide6">
+
+<h1>About Hospital</h1>
+
+<p>
+
+Our hospital provides ICU,
+Emergency,
+OPD,
+Surgery facilities.
+
+</p>
+
+</section>
+
+<!-- SLIDE 7 -->
+
+<section id="slide7" class="slide slide7">
+
+<h1>Contact Us</h1>
+
+<p>Email: hospital@gmail.com</p>
+
+<p>Phone: 9876543210</p>
+
+<p>Address: Nagpur</p>
+
+</section>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
-<img src="images/hospital.jpg" alt="Hospital Image">
