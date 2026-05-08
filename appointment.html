@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Appointment</title>
+    <title>Appointment Booking</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<h2>Book Appointment</h2>
+<!-- Navbar -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="doctors.html">Doctors</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="output.html">Output</a>
+</nav>
 
-<input type="text" id="name" placeholder="Enter Name"><br><br>
-<input type="date" id="date"><br><br>
-<input type="time" id="time"><br><br>
+<div class="container">
 
-<button onclick="saveData()">Book</button>
+    <div class="card">
 
-<script>
-function saveData() {
-    var name = document.getElementById("name").value;
-    var date = document.getElementById("date").value;
-    var time = document.getElementById("time").value;
+        <h1>Book Appointment</h1>
 
-    if(name=="" || date=="" || time==""){
-        alert("Fill all fields");
-        return;
-    }
+        <input type="text" id="name" placeholder="Enter Patient Name">
 
-    var data = {
-        name: name,
-        date: date,
-        time: time
-    };
+        <select id="doctor">
+            <option value="">Select Doctor</option>
 
-    localStorage.setItem("appointment", JSON.stringify(data));
+            <option>Dr. Sharma</option>
+            <option>Dr. Khan</option>
+            <option>Dr. Patel</option>
+            <option>Dr. Mehta</option>
+            <option>Dr. Singh</option>
+        </select>
 
-    alert("Saved!");
-    window.location.href = "output.html";
-}
-</script>
+        <input type="date" id="date">
+
+        <input type="time" id="time">
+
+        <button onclick="saveData()">Book Appointment</button>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
