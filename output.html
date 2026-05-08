@@ -1,73 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-    <title>Appointment Output</title>
+<title>Output</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="doctors.html">Doctors</a>
-    <a href="appointment.html">Appointment</a>
-    <a href="output.html">Output</a>
-</nav>
+<h1 class="title">Appointment Output</h1>
 
-<div class="container">
+<table>
 
-    <div class="card">
+<tr>
 
-        <h1>Appointment Records</h1>
+<th>Name</th>
+<th>Doctor</th>
+<th>Age</th>
+<th>Time</th>
 
-        <table id="table">
+</tr>
 
-            <tr>
-                <th>Patient Name</th>
-                <th>Doctor</th>
-                <th>Date</th>
-                <th>Time</th>
-            </tr>
+<tbody id="tableBody">
 
-        </table>
+</tbody>
 
-        <br>
+</table>
 
-        <button onclick="clearData()">Clear All</button>
-
-    </div>
-
-</div>
-
-<script>
-
-var data = JSON.parse(localStorage.getItem("appointments")) || [];
-
-var table = document.getElementById("table");
-
-data.forEach(function(item){
-
-    var row = table.insertRow();
-
-    row.insertCell(0).innerText = item.name;
-    row.insertCell(1).innerText = item.doctor;
-    row.insertCell(2).innerText = item.date;
-    row.insertCell(3).innerText = item.time;
-
-});
-
-function clearData(){
-
-    localStorage.clear();
-
-    location.reload();
-}
-
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
