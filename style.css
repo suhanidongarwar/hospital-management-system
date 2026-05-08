@@ -209,4 +209,6 @@ nav ul li a:hover{
     height:250px;
     border-radius:15px;
     object-fit:cover;
+}html{
+    scroll-behavior:smooth;
 }
