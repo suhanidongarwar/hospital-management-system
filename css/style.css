@@ -1,1 +1,132 @@
+html{
+    scroll-behavior:smooth;
+}
 
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+nav{
+    background:#03045e;
+    padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.slide{
+    height:100vh;
+    padding-top:120px;
+    text-align:center;
+}
+
+/* Slide Colors */
+
+.slide1{
+    background:#90e0ef;
+}
+
+.slide2{
+    background:#ffccd5;
+}
+
+.slide3{
+    background:#caffbf;
+}
+
+.slide4{
+    background:#ffd6a5;
+}
+
+.slide5{
+    background:#bdb2ff;
+}
+
+.slide6{
+    background:#a0c4ff;
+}
+
+.slide7{
+    background:#9bf6ff;
+}
+
+.main-image{
+    width:70%;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 20px black;
+}
+
+.form-box{
+    width:400px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 15px gray;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    background:#0077b6;
+    color:white;
+    border-radius:10px;
+    font-size:18px;
+}
+
+.doctor-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.doctor-card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 15px gray;
+}
+
+.doctor-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:80%;
+    margin:auto;
+    background:white;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid black;
+    padding:15px;
+}
