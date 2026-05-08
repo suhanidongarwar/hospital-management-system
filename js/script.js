@@ -1,34 +1,48 @@
-function bookAppointment() {
+function saveAppointment() {
 
-    // input values lena
-    let name = document.getElementById("name").value;
-    let date = document.getElementById("date").value;
-    let doctor = document.getElementById("doctor").value;
+let name = document.getElementById("name").value;
 
-    // validation
-    if (name === "" || date === "" || doctor === "") {
-        alert("Please fill all fields!");
-        return;
-    }
+let age = document.getElementById("age").value;
 
-    // table select karna
-    let table = document.getElementById("outputTable");
+let doctor = document.getElementById("doctor").value;
 
-    // new row add karna
-    let newRow = table.insertRow(-1);
+let time = document.getElementById("time").value;
 
-    // cells create
-    let cell1 = newRow.insertCell(0);
-    let cell2 = newRow.insertCell(1);
-    let cell3 = newRow.insertCell(2);
+let patient = {
+    name,
+    age,
+    doctor,
+    time
+};
 
-    // values insert
-    cell1.innerHTML = name;
-    cell2.innerHTML = date;
-    cell3.innerHTML = doctor;
+let data = JSON.parse(localStorage.getItem("patients")) || [];
 
-    // form reset
-    document.getElementById("name").value = "";
-    document.getElementById("date").value = "";
-    document.getElementById("doctor").value = "";
+data.push(patient);
+
+localStorage.setItem("patients", JSON.stringify(data));
+
+alert("Appointment Booked");
+
+window.location.href = "output.html";
+}
+
+window.onload = function () {
+
+let table = document.getElementById("tableBody");
+
+let data = JSON.parse(localStorage.getItem("patients")) || [];
+
+data.forEach((patient) => {
+
+table.innerHTML += `
+<tr>
+<td>${patient.name}</td>
+<td>${patient.doctor}</td>
+<td>${patient.age}</td>
+<td>${patient.time}</td>
+</tr>
+`;
+
+});
+
 }
