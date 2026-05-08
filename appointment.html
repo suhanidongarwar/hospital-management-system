@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Appointment Booking</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<head>
+
+<title>Appointment</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="doctors.html">Doctors</a>
-    <a href="appointment.html">Appointment</a>
-    <a href="output.html">Output</a>
-</nav>
+<div class="appointment-form">
 
-<div class="container">
+<h1>Book Appointment</h1>
 
-    <div class="card">
+<input type="text" id="name" placeholder="Patient Name">
 
-        <h1>Book Appointment</h1>
+<input type="number" id="age" placeholder="Age">
 
-        <input type="text" id="name" placeholder="Enter Patient Name">
+<select id="gender">
 
-        <select id="doctor">
-            <option value="">Select Doctor</option>
+<option>Male</option>
+<option>Female</option>
 
-            <option>Dr. Sharma</option>
-            <option>Dr. Khan</option>
-            <option>Dr. Patel</option>
-            <option>Dr. Mehta</option>
-            <option>Dr. Singh</option>
-        </select>
+</select>
 
-        <input type="date" id="date">
+<select id="doctor">
 
-        <input type="time" id="time">
+<option>Dr. Mehta</option>
+<option>Dr. Sharma</option>
 
-        <button onclick="saveData()">Book Appointment</button>
+</select>
 
-    </div>
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<textarea id="problem" placeholder="Problem"></textarea>
+
+<div class="btns">
+
+<button onclick="saveAppointment()">Submit</button>
+
+<button type="reset">Reset</button>
+
+</div>
 
 </div>
 
