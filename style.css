@@ -1,30 +1,69 @@
-body{
-    margin:0;
-    font-family:Arial;
-    background:#f4f7fb;
-}
-
 html{
     scroll-behavior:smooth;
 }
 
-.navbar{
-    background:#0077b6;
-    padding:15px;
-    text-align:center;
+body{
+    margin:0;
+    font-family:Arial;
 }
 
-.navbar a{
+nav{
+    background:black;
+    padding:20px;
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+nav a{
     color:white;
     text-decoration:none;
     margin:20px;
     font-size:20px;
 }
 
-.form-section,
-.output-section{
-    padding:40px;
-    min-height:100vh;
+.slide{
+    height:100vh;
+    padding-top:100px;
+    text-align:center;
+}
+
+/* COLORS */
+
+.slide1{
+    background:#90e0ef;
+}
+
+.slide2{
+    background:#ffccd5;
+}
+
+.slide3{
+    background:#caffbf;
+}
+
+.slide4{
+    background:#ffd6a5;
+}
+
+.slide5{
+    background:#bdb2ff;
+}
+
+.slide6{
+    background:#a0c4ff;
+}
+
+.slide7{
+    background:#9bf6ff;
+}
+
+.main-image{
+    width:70%;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 15px black;
 }
 
 .form-box{
@@ -32,8 +71,8 @@ html{
     margin:auto;
     background:white;
     padding:30px;
-    border-radius:15px;
-    box-shadow:0 0 10px gray;
+    border-radius:20px;
+    box-shadow:0 0 15px gray;
 }
 
 input,
@@ -49,32 +88,52 @@ button{
     width:100%;
     padding:12px;
     margin-top:20px;
+    border:none;
     background:#0077b6;
     color:white;
-    border:none;
     border-radius:10px;
     font-size:18px;
-    cursor:pointer;
 }
 
 button:hover{
     background:#023e8a;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
+.doctor-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.doctor-card{
+    width:250px;
     background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 15px gray;
+    transition:0.5s;
+}
+
+.doctor-card:hover{
+    transform:scale(1.05);
+}
+
+.doctor-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+table{
+    width:80%;
+    margin:auto;
+    background:white;
+    border-collapse:collapse;
 }
 
 table th,
 table td{
-    border:1px solid gray;
+    border:1px solid black;
     padding:15px;
-    text-align:center;
-}
-
-table th{
-    background:#0077b6;
-    color:white;
 }
