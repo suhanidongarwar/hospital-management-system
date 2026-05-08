@@ -29,40 +29,36 @@ function saveAppointment(){
 
     localStorage.setItem("appointments", JSON.stringify(data));
 
-    alert("Appointment Saved");
+    showData();
 
-    window.location.href = "output.html";
+    alert("Appointment Saved");
 }
 
-window.onload = function(){
+function showData(){
 
     let tableBody = document.getElementById("tableBody");
 
-    if(tableBody){
+    tableBody.innerHTML = "";
 
-        let data = JSON.parse(localStorage.getItem("appointments")) || [];
+    let data = JSON.parse(localStorage.getItem("appointments")) || [];
 
-        data.forEach(function(patient){
+    data.forEach(function(patient){
 
-            tableBody.innerHTML += `
+        tableBody.innerHTML += `
 
-            <tr>
+        <tr>
 
-            <td>${patient.name}</td>
+        <td>${patient.name}</td>
 
-            <td>${patient.age}</td>
+        <td>${patient.doctor}</td>
 
-            <td>${patient.doctor}</td>
+        <td>${patient.age}</td>
 
-            <td>${patient.date}</td>
+        <td>${patient.time}</td>
 
-            <td>${patient.time}</td>
-
-            <td>${patient.problem}</td>
-
-            </tr>
-
-            `;
-        });
-    }
+        </tr>
+        `;
+    });
 }
+
+showData();
