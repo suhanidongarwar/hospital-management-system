@@ -1,22 +1,33 @@
 function saveAppointment(){
 
     let name = document.getElementById("name").value;
+
     let age = document.getElementById("age").value;
+
     let doctor = document.getElementById("doctor").value;
+
+    let date = document.getElementById("date").value;
+
     let time = document.getElementById("time").value;
 
+    let problem = document.getElementById("problem").value;
+
     let patient = {
+
         name:name,
         age:age,
         doctor:doctor,
-        time:time
+        date:date,
+        time:time,
+        problem:problem
+
     };
 
-    let data = JSON.parse(localStorage.getItem("patients")) || [];
+    let data = JSON.parse(localStorage.getItem("appointments")) || [];
 
     data.push(patient);
 
-    localStorage.setItem("patients", JSON.stringify(data));
+    localStorage.setItem("appointments", JSON.stringify(data));
 
     alert("Appointment Saved");
 
@@ -25,26 +36,33 @@ function saveAppointment(){
 
 window.onload = function(){
 
-    let table = document.getElementById("tableBody");
+    let tableBody = document.getElementById("tableBody");
 
-    if(table){
+    if(tableBody){
 
-        let data = JSON.parse(localStorage.getItem("patients")) || [];
+        let data = JSON.parse(localStorage.getItem("appointments")) || [];
 
         data.forEach(function(patient){
 
-            table.innerHTML += `
+            tableBody.innerHTML += `
+
             <tr>
-                <td>${patient.name}</td>
-                <td>${patient.doctor}</td>
-                <td>${patient.age}</td>
-                <td>${patient.time}</td>
+
+            <td>${patient.name}</td>
+
+            <td>${patient.age}</td>
+
+            <td>${patient.doctor}</td>
+
+            <td>${patient.date}</td>
+
+            <td>${patient.time}</td>
+
+            <td>${patient.problem}</td>
+
             </tr>
+
             `;
         });
     }
-}
-section{
-    min-height:100vh;
-    padding:50px;
 }
