@@ -44,3 +44,7 @@ window.onload = function(){
         });
     }
 }
+section{
+    min-height:100vh;
+    padding:50px;
+}
