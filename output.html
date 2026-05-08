@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-<title>Output</title>
+    <title>Appointment Output</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<h1 class="title">Appointment Output</h1>
+<nav class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="doctors.html">Doctors</a>
+
+    <a href="appointment.html">Appointment</a>
+
+    <a href="output.html">Output</a>
+
+</nav>
+
+<section class="output-section">
+
+<h1>Appointment Details</h1>
 
 <table>
+
+<thead>
 
 <tr>
 
 <th>Name</th>
-<th>Doctor</th>
 <th>Age</th>
+<th>Doctor</th>
+<th>Date</th>
 <th>Time</th>
+<th>Problem</th>
 
 </tr>
+
+</thead>
 
 <tbody id="tableBody">
 
@@ -30,12 +49,9 @@
 
 </table>
 
+</section>
+
 <script src="js/script.js"></script>
 
 </body>
-  body{
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-}
 </html>
