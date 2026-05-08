@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <title>Appointment Booking</title>
 
-<title>Appointment</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="appointment-form">
+<nav class="navbar">
+
+    <a href="index.html">Home</a>
+
+    <a href="doctors.html">Doctors</a>
+
+    <a href="appointment.html">Appointment</a>
+
+    <a href="output.html">Output</a>
+
+</nav>
+
+<section class="form-section">
 
 <h1>Book Appointment</h1>
+
+<div class="form-box">
 
 <input type="text" id="name" placeholder="Patient Name">
 
 <input type="number" id="age" placeholder="Age">
 
-<select id="gender">
-
-<option>Male</option>
-<option>Female</option>
-
-</select>
-
 <select id="doctor">
 
-<option>Dr. Mehta</option>
 <option>Dr. Sharma</option>
+<option>Dr. Mehta</option>
+<option>Dr. Khan</option>
 
 </select>
 
@@ -39,22 +44,15 @@
 
 <textarea id="problem" placeholder="Problem"></textarea>
 
-<div class="btns">
-
-<button onclick="saveAppointment()">Submit</button>
-
-<button type="reset">Reset</button>
+<button onclick="saveAppointment()">
+Book Appointment
+</button>
 
 </div>
 
-</div>
+</section>
 
 <script src="js/script.js"></script>
 
 </body>
-  body{
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-}
 </html>
