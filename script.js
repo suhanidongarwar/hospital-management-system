@@ -1,32 +1,46 @@
-function saveData() {
+function saveAppointment(){
 
-    var name = document.getElementById("name").value;
-    var doctor = document.getElementById("doctor").value;
-    var date = document.getElementById("date").value;
-    var time = document.getElementById("time").value;
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let doctor = document.getElementById("doctor").value;
+    let time = document.getElementById("time").value;
 
-    if(name=="" || doctor=="" || date=="" || time==""){
-
-        alert("Please fill all fields");
-
-        return;
-    }
-
-    var oldData = JSON.parse(localStorage.getItem("appointments")) || [];
-
-    var newData = {
-
+    let patient = {
         name:name,
+        age:age,
         doctor:doctor,
-        date:date,
         time:time
     };
 
-    oldData.push(newData);
+    let data = JSON.parse(localStorage.getItem("patients")) || [];
 
-    localStorage.setItem("appointments", JSON.stringify(oldData));
+    data.push(patient);
 
-    alert("Appointment Booked Successfully!");
+    localStorage.setItem("patients", JSON.stringify(data));
+
+    alert("Appointment Saved");
 
     window.location.href = "output.html";
+}
+
+window.onload = function(){
+
+    let table = document.getElementById("tableBody");
+
+    if(table){
+
+        let data = JSON.parse(localStorage.getItem("patients")) || [];
+
+        data.forEach(function(patient){
+
+            table.innerHTML += `
+            <tr>
+                <td>${patient.name}</td>
+                <td>${patient.doctor}</td>
+                <td>${patient.age}</td>
+                <td>${patient.time}</td>
+            </tr>
+            `;
+        });
+    }
 }
