@@ -3,253 +3,275 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hospital Management System</title>
+    <title>Hospital Management System</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-<nav>
+    <nav>
 
-<a href="#slide1">Home</a>
+        <h1>City Hospital</h1>
 
-<a href="#slide2">Login</a>
+        <ul>
 
-<a href="#slide3">Doctors</a>
+            <li><a href="#home">Home</a></li>
 
-<a href="#slide4">Appointment</a>
+            <li><a href="#login">Login</a></li>
 
-<a href="#slide5">Output</a>
+            <li><a href="#doctors">Doctors</a></li>
 
-<a href="#slide6">About</a>
+            <li><a href="#appointment">Appointment</a></li>
 
-<a href="#slide7">Contact</a>
+            <li><a href="#output">Output</a></li>
 
-</nav>
+            <li><a href="#about">About</a></li>
 
-<!-- HOME PAGE -->
+            <li><a href="#contact">Contact</a></li>
 
-<section id="slide1" class="slide slide1">
+        </ul>
 
-<h1>City Hospital</h1>
+    </nav>
 
-<h2>Welcome To Our Hospital</h2>
+    <!-- HOME PAGE -->
 
-<p>Best Healthcare Services</p>
+    <section id="home" class="slide home-slide">
 
-<!-- HOSPITAL IMAGE -->
+        <div class="home-content">
 
-<img src="images/hospital.jpg" class="main-image">
+            <div class="left">
 
-<br><br>
+                <h2>Welcome To City Hospital</h2>
 
-<button>Emergency</button>
+                <p>
 
-<button>ICU</button>
+                    Best Healthcare Services For Patients
 
-<button>OPD</button>
+                </p>
 
-<button>Surgery</button>
+                <div class="services">
 
-</section>
+                    <button>Emergency</button>
 
-<!-- LOGIN PAGE -->
+                    <button>ICU</button>
 
-<section id="slide2" class="slide slide2">
+                    <button>OPD</button>
 
-<h1>Patient Login</h1>
+                    <button>Surgery</button>
 
-<div class="form-box">
+                </div>
 
-<input type="text" placeholder="Enter Name">
+            </div>
 
-<input type="email" placeholder="Enter Email">
+            <div class="right">
 
-<input type="password" placeholder="Enter Password">
+                <!-- HOSPITAL IMAGE -->
 
-<input type="number" placeholder="Mobile Number">
+                <img src="image/hospital.jpg" class="hospital-img">
 
-<button>Login</button>
+            </div>
 
-<button>Register</button>
+        </div>
 
-</div>
+    </section>
 
-</section>
+    <!-- LOGIN PAGE -->
 
-<!-- DOCTOR PAGE -->
+    <section id="login" class="slide login-slide">
 
-<section id="slide3" class="slide slide3">
+        <h1>Patient Login</h1>
 
-<h1>Our Doctors</h1>
+        <div class="form-box">
 
-<div class="doctor-container">
+            <input type="text" placeholder="Enter Name">
 
-<!-- DOCTOR 1 -->
+            <input type="email" placeholder="Enter Email">
 
-<div class="doctor-card">
+            <input type="password" placeholder="Enter Password">
 
-<img src="images/doctor1.jpg">
+            <input type="number" placeholder="Mobile Number">
 
-<h2>Dr. Sharma</h2>
+            <button>Login</button>
 
-<p>Cardiologist</p>
+            <button>Register</button>
 
-<p>MBBS, MD</p>
+        </div>
 
-<p>10 AM - 4 PM</p>
+    </section>
 
-</div>
+    <!-- DOCTORS PAGE -->
 
-<!-- DOCTOR 2 -->
+    <section id="doctors" class="slide doctor-slide">
 
-<div class="doctor-card">
+        <h1 class="title">Our Doctors</h1>
 
-<img src="images/doctor2.jpg">
+        <div class="doctor-container">
 
-<h2>Dr. Mehta</h2>
+            <!-- DOCTOR 1 -->
 
-<p>Neurologist</p>
+            <div class="doctor-card">
 
-<p>MBBS, MS</p>
+                <img src="image/doctor1.jpg">
 
-<p>11 AM - 5 PM</p>
+                <h2>Dr. Sharma</h2>
 
-</div>
+                <p>Cardiologist</p>
 
-<!-- DOCTOR 3 -->
+                <p>MBBS, MD</p>
 
-<div class="doctor-card">
+                <p>10 AM - 4 PM</p>
 
-<img src="images/doctor3.jpg">
+            </div>
 
-<h2>Dr. Khan</h2>
+            <!-- DOCTOR 2 -->
 
-<p>Surgeon</p>
+            <div class="doctor-card">
 
-<p>MBBS, Surgeon</p>
+                <img src="image/doctor2.jpg">
 
-<p>9 AM - 3 PM</p>
+                <h2>Dr. Mehta</h2>
 
-</div>
+                <p>Neurologist</p>
 
-</div>
+                <p>MBBS, MS</p>
 
-</section>
+                <p>11 AM - 5 PM</p>
 
-<!-- APPOINTMENT PAGE -->
+            </div>
 
-<section id="slide4" class="slide slide4">
+            <!-- DOCTOR 3 -->
 
-<h1>Book Appointment</h1>
+            <div class="doctor-card">
 
-<div class="form-box">
+                <img src="image/doctor3.jpg">
 
-<input type="text" id="name" placeholder="Patient Name">
+                <h2>Dr. Khan</h2>
 
-<input type="number" id="age" placeholder="Age">
+                <p>Surgeon</p>
 
-<select id="doctor">
+                <p>MBBS, Surgeon</p>
 
-<option>Dr. Sharma</option>
+                <p>9 AM - 3 PM</p>
 
-<option>Dr. Mehta</option>
+            </div>
 
-<option>Dr. Khan</option>
+        </div>
 
-</select>
+    </section>
 
-<input type="date" id="date">
+    <!-- APPOINTMENT PAGE -->
 
-<input type="time" id="time">
+    <section id="appointment" class="slide appointment-slide">
 
-<textarea id="problem" placeholder="Problem"></textarea>
+        <h1>Book Appointment</h1>
 
-<button onclick="saveAppointment()">
+        <div class="form-box">
 
-Submit
+            <input type="text" id="name" placeholder="Patient Name">
 
-</button>
+            <input type="number" id="age" placeholder="Age">
 
-</div>
+            <select id="doctor">
 
-</section>
+                <option>Dr. Sharma</option>
 
-<!-- OUTPUT PAGE -->
+                <option>Dr. Mehta</option>
 
-<section id="slide5" class="slide slide5">
+                <option>Dr. Khan</option>
 
-<h1>Appointment Output</h1>
+            </select>
 
-<table>
+            <input type="date" id="date">
 
-<thead>
+            <input type="time" id="time">
 
-<tr>
+            <textarea id="problem" placeholder="Problem"></textarea>
 
-<th>Name</th>
+            <button onclick="saveAppointment()">
 
-<th>Doctor</th>
+                Submit
 
-<th>Age</th>
+            </button>
 
-<th>Time</th>
+        </div>
 
-</tr>
+    </section>
 
-</thead>
+    <!-- OUTPUT PAGE -->
 
-<tbody id="tableBody">
+    <section id="output" class="slide output-slide">
 
-</tbody>
+        <h1>Appointment Output</h1>
 
-</table>
+        <table border="1">
 
-</section>
+            <thead>
 
-<!-- ABOUT PAGE -->
+                <tr>
 
-<section id="slide6" class="slide slide6">
+                    <th>Name</th>
 
-<h1>About Hospital</h1>
+                    <th>Doctor</th>
 
-<p>
+                    <th>Age</th>
 
-City Hospital provides ICU,
-Emergency,
-OPD,
-Surgery,
-and Best Healthcare Services.
+                    <th>Time</th>
 
-</p>
+                </tr>
 
-<img src="images/hospital.jpg" class="main-image">
+            </thead>
 
-</section>
+            <tbody id="tableBody">
 
-<!-- CONTACT PAGE -->
+            </tbody>
 
-<section id="slide7" class="slide slide7">
+        </table>
 
-<h1>Contact Us</h1>
+    </section>
 
-<p>Email : hospital@gmail.com</p>
+    <!-- ABOUT PAGE -->
 
-<p>Phone : 9876543210</p>
+    <section id="about" class="slide about-slide">
 
-<p>Address : Nagpur</p>
+        <h1>About Hospital</h1>
 
-</section>
+        <p>
 
-<script src="js/script.js"></script>
+            City Hospital provides ICU,
+            Emergency,
+            OPD,
+            Surgery,
+            and best healthcare services.
+
+        </p>
+
+        <img src="image/hospital.jpg" class="hospital-img">
+
+    </section>
+
+    <!-- CONTACT PAGE -->
+
+    <section id="contact" class="slide contact-slide">
+
+        <h1>Contact Us</h1>
+
+        <p>Email : hospital@gmail.com</p>
+
+        <p>Phone : 9876543210</p>
+
+        <p>Address : Nagpur</p>
+
+    </section>
+
+    <script src="js/script.js"></script>
 
 </body>
 
